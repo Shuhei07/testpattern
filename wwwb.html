@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>test pattern</title>
+    </head>
+    <body background="wwwb.png">
+        <div style="background-color: aliceblue;">
+            <h3>wwwb</h3>
+                <!-- ボタンの表示 -->
+                <input type="button" value="wwwb" onClick="document.body.style.backgroundImage = 'url(wwwb.png)';">
+                <input type="button" value="wbwb" onClick="document.body.style.backgroundImage = 'url(wbwb.png)';">
+                <input type="button" value="wbbb" onClick="document.body.style.backgroundImage = 'url(wbbb.png)';">
+                <!--
+                <input type="button" value="480p(720x480)" onClick="window.open('wwwb.html', null, 'width=720, height=480');">
+                <input type="button" value="720p(1280x720)" onClick="window.open('wwwb.html', null, 'width=1280, height=720');">
+                -->
+                <input type="button" value="480p(720x480)" onClick="open480window();">
+                <input type="button" value="720p(1280x720)" onClick="open720window();">
+        </div>
+
+
+    </body>
+    <script>
+        document.writeln("<div style='background-color:moccasin'>" );
+            document.writeln("screen.availWidth : " + screen.availWidth + " x " + screen.availHeight + "</br>");
+            document.writeln("window.innerWidth : " + window.innerWidth + " x " + window.innerHeight + "</br>");
+            document.writeln("window.outerWidth : " + window.outerWidth + " x " + window.outerHeight + "</br>");
+            // document.writeln("document.body.clientWidth : " + document.body.clientWidth + " x " + document.body.clientHeight + "</br>");
+            // document.writeln("document.documentElement.clientWidth : " + document.documentElement.clientWidth + " x " + document.documentElement.clientHeight + "</br>");
+        document.writeln("</div>" );
+
+        var newWindow;
+
+        function open480window()
+        {
+            if (newWindow == undefined ) 
+                newWindow = window.open("wwwb.html", null, "width=720, height=480");
+            newWindow.resizeTo(720,480);
+        }
+        function open720window()
+        {
+            if (newWindow == undefined ) 
+                newWindow = window.open("wwwb.html", null, "width=1280, height=720");
+            newWindow.resizeTo(1280,720);
+        }
+</script>
+</html>
